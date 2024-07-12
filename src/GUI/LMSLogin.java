@@ -29,6 +29,7 @@ public class LMSLogin {
 
         frame.setSize(300, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Log In");
 
         panel = new JPanel();
         frame.add(panel);
@@ -77,12 +78,14 @@ public class LMSLogin {
         for (int i = 0; i < workersList.size(); i++) {
             Worker worker = workersList.get(i);
 
-            if (UserField.getText() == worker.GetUserName()) {
+            if (UserField.getText().equals(worker.GetUserName())) {
                 boolean fComp = Arrays.equals(PasswordField.getPassword(), worker.GetPassword());
                 boolean sComp = Arrays.equals(worker.GetPassword(), PasswordField.getPassword());
 
                 if (fComp && sComp) {
                     lms.SetWorker(worker);
+                    lms.ShowFrame();
+                    frame.dispose();
                     return;
                 }
             }
