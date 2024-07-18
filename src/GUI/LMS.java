@@ -12,8 +12,8 @@ public class LMS {
     private Worker worker;
     private ArrayList<Worker> workersList;
 
-    JFrame frame;
-    JPanel panel;
+    private JFrame frame;
+    private JPanel panel;
 
     public static void main(String[] args) {
         LMS lms = new LMS();
