@@ -34,7 +34,7 @@ public class LMSLogin {
         panel = new JPanel();
         frame.add(panel);
 
-        panel.setLayout(null);
+        // panel.setLayout(null);
         this.InitFields();
 
         frame.setVisible(true);
